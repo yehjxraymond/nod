@@ -1,6 +1,6 @@
 {
   "name": "generator-nod",
-  "version": "0.0.1",
+  "version": "0.0.0-development",
   "description": "My node module",
   "license": "MIT",
   "repository": "diegohaz/nod",
@@ -28,7 +28,8 @@
     "build": "babel src -d dist",
     "preversion": "npm run lint && npm test && npm run build",
     "version": "standard-changelog && git add CHANGELOG.md",
-    "postpublish": "git push origin master --follow-tags"
+    "postpublish": "git push origin master --follow-tags",
+    "semantic-release": "semantic-release"
   },
   "husky": {
     "hooks": {
@@ -44,7 +45,9 @@
   "keywords": [
     "generator-nod"
   ],
-  "dependencies": {},
+  "dependencies": {
+    "semantic-release-cli": "5.1.1"
+  },
   "devDependencies": {
     "@babel/cli": "7.2.3",
     "@babel/core": "7.3.4",
@@ -69,6 +72,7 @@
     "opn-cli": "4.0.0",
     "prettier": "1.16.4",
     "rimraf": "2.6.3",
-    "standard-changelog": "2.0.7"
+    "standard-changelog": "2.0.7",
+    "semantic-release": "^15.13.12"
   }
 }
