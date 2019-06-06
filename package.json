@@ -3,7 +3,7 @@
   "version": "0.0.0-development",
   "description": "My node module",
   "license": "MIT",
-  "repository": "diegohaz/nod",
+  "repository": "rjchow/nod",
   "main": "dist/index.js",
   "author": {
     "name": "Diego Haz",
@@ -27,8 +27,6 @@
     "prebuild": "npm run docs && npm run clean && npm run flowbuild",
     "build": "babel src -d dist",
     "preversion": "npm run lint && npm test && npm run build",
-    "version": "standard-changelog && git add CHANGELOG.md",
-    "postpublish": "git push origin master --follow-tags",
     "semantic-release": "semantic-release"
   },
   "husky": {
@@ -46,7 +44,6 @@
     "generator-nod"
   ],
   "dependencies": {
-    "semantic-release-cli": "5.1.1"
   },
   "devDependencies": {
     "@babel/cli": "7.2.3",
