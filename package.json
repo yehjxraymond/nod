@@ -15,33 +15,41 @@
     "src"
   ],
   "scripts": {
+    "type-check": "tsc --noEmit",
     "test": "jest",
     "coverage": "npm test -- --coverage",
     "postcoverage": "opn coverage/lcov-report/index.html",
-    "lint": "eslint .",
+    "lint": "eslint . --ext js,ts,tsx",
     "docs": "documentation readme src --section=API",
     "postdocs": "git add README.md",
     "clean": "rimraf dist",
     "prebuild": "npm run docs && npm run clean",
-    "build": "babel src -d dist",
+    "build": "tsc --emitDeclarationOnly && babel src -d dist -x .js,.ts,.tsx",
     "preversion": "npm run lint && npm test && npm run build",
     "semantic-release": "semantic-release"
   },
+  "types": "dist/ts/src",
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
     }
   },
   "lint-staged": {
-    "*.js": [
-      "eslint --fix",
+    "*.{js,ts,tsx}": [
+      "eslint --fix --ext js,ts,tsx",
       "git add"
     ]
   },
   "keywords": [
     "generator-nod"
   ],
-  "dependencies": {},
+  "dependencies": {
+    "@babel/preset-typescript": "7.3.3",
+    "@types/jest": "24.0.13",
+    "@typescript-eslint/eslint-plugin": "1.9.0",
+    "@typescript-eslint/parser": "1.9.0",
+    "typescript": "3.5.1"
+  },
   "devDependencies": {
     "@babel/cli": "7.2.3",
     "@babel/core": "7.3.4",
