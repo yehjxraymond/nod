@@ -37,13 +37,13 @@ $ npm run build # generate docs and transpile code
 ```
 
 ## Setting up CI with automatic semantic-release versioning
-- Obtain CircleCI API token
-- Modify package.json with:
-  - package name 
-  - package repository 
 
-Run `npx semantic-release-cli --ask-for-passwords`
+-   Obtain CircleCI API token
+-   Modify package.json with:
+    -   package name 
+    -   package repository 
 
+Run `npx semantic-release-cli setup --ask-for-passwords`
 
 ## Commit message format
 
@@ -55,12 +55,11 @@ Tools such as [commitizen](https://github.com/commitizen/cz-cli), [commitlint](h
 
 Here is an example of the release type that will be done based on a commit messages:
 
-| Commit message                                                                                                                                                                                   | Release type               |
-|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------|
-| `fix(pencil): stop graphite breaking when too much pressure applied`                                                                                                                             | Patch Release (1.0.x)             |
+| Commit message                                                                                                                                                                                   | Release type                       |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------- |
+| `fix(pencil): stop graphite breaking when too much pressure applied`                                                                                                                             | Patch Release (1.0.x)              |
 | `feat(pencil): add 'graphiteWidth' option`                                                                                                                                                       | ~~Minor~~ Feature Release (1.x.0)  |
 | `perf(pencil): remove graphiteWidth option`<br><br>`BREAKING CHANGE: The graphiteWidth option has been removed.`<br>`The default graphite width of 10mm is always used for performance reasons.` | ~~Major~~ Breaking Release (x.0.0) |
-
 
 ## API
 
