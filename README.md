@@ -5,6 +5,7 @@ NodeJS module generator/boilerplate.
 ## Features
 
 -   [**Babel**](https://babeljs.io/) - Write next generation JavaScript today.
+-   [**Debug**](https://github.com/visionmedia/debug) - JS debugging utility that works both in node.js and browsers.
 -   [**Jest**](https://facebook.github.io/jest) - JavaScript testing framework used by Facebook.
 -   [**ESLint**](http://eslint.org/) - Make sure you are writing a quality code.
 -   [**Prettier**](https://prettier.io/) - Enforces a consistent style by parsing your code and re-printing it.
@@ -44,6 +45,15 @@ $ npm run build # generate docs and transpile code
     -   package repository 
 
 Run `npx semantic-release-cli setup --ask-for-passwords`
+
+## Logging
+
+Turn on debugging by using the DEBUG environment variable for Node.js and using localStorage.debug in the browser.
+
+E.g:
+```bash
+DEBUG="PLACEHOLDER_PROJECT_NAME:*" npm run dev
+```
 
 ## Commit message format
 
