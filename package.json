@@ -1,14 +1,14 @@
 {
-  "name": "@rjchow/nod",
+  "name": "opencerts-dnsprove",
   "version": "0.0.0-development",
-  "description": "My node module",
+  "description": "Helper utility for retrieving OpenCerts document store address records from DNS",
   "license": "MIT",
-  "repository": "rjchow/nod",
+  "repository": "opencerts/dnsprove",
   "main": "dist/index.js",
   "author": {
-    "name": "Diego Haz",
-    "email": "hazdiego@gmail.com",
-    "url": "https://github.com/diegohaz"
+    "name": "RJ Chow",
+    "email": "me@rjchow.com",
+    "url": "https://github.com/rjchow"
   },
   "files": [
     "dist",
