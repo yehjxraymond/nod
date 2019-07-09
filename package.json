@@ -1,7 +1,7 @@
 {
   "name": "opencerts-dnsprove",
   "version": "0.0.0-development",
-  "description": "Helper utility for retrieving OpenCerts document store address records from DNS",
+  "description": "Helper utility for retrieving OpenAttestations document store address records from DNS",
   "license": "MIT",
   "repository": "opencerts/dnsprove",
   "main": "dist/index.js",
@@ -21,11 +21,11 @@
     "postcoverage": "open-cli coverage/lcov-report/index.html",
     "lint": "eslint . --ext js,ts,tsx",
     "lint:fix": "npm run lint -- --fix",
-    "docs": "documentation readme src --section=API",
+    "docs": "documentation readme src/index.ts --section=API --document-exported --babel=./.babelrc --parse-extension=ts",
     "postdocs": "git add README.md",
     "clean": "rimraf dist",
     "prebuild": "npm run docs && npm run clean",
-    "build": "tsc --emitDeclarationOnly && babel src -d dist --ignore src/**/*.spec.js,src/**/*.test.js -x .js,.ts,.tsx",
+    "build": "tsc --emitDeclarationOnly && babel src -d dist --ignore **/*.d.ts,src/**/*.spec.ts,src/**/*.test.ts -x .js,.ts,.tsx",
     "preversion": "npm run lint && npm test && npm run build",
     "semantic-release": "semantic-release"
   },
@@ -45,7 +45,8 @@
     "generator-nod"
   ],
   "dependencies": {
-    "debug": "4.1.1"
+    "debug": "4.1.1",
+    "dohdec": "2.0.0"
   },
   "devDependencies": {
     "@babel/cli": "7.4.4",
@@ -54,6 +55,7 @@
     "@babel/preset-env": "7.4.5",
     "@babel/preset-typescript": "7.3.3",
     "@types/debug": "4.1.4",
+    "@types/lodash": "4.14.135",
     "@types/jest": "24.0.13",
     "@typescript-eslint/eslint-plugin": "1.11.0",
     "@typescript-eslint/parser": "1.11.0",
@@ -71,7 +73,7 @@
     "open-cli": "5.0.0",
     "prettier": "1.18.2",
     "rimraf": "2.6.3",
-    "semantic-release": "15.13.18",
+    "semantic-release": "^15.13.18",
     "typescript": "3.5.1"
   },
   "publishConfig": {
