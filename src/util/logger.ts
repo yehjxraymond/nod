@@ -1,10 +1,9 @@
 import debug from "debug";
 
-const logger = debug("dnsprove");
-
-export const trace = (namespace: string) => logger.extend(`trace:${namespace}`);
-export const info = (namespace: string) => logger.extend(`info:${namespace}`);
-export const error = (namespace: string) => logger.extend(`error:${namespace}`);
+// not using .extends because of next.js resolve modules bug where its picking up old version of debug
+export const trace = (namespace: string) => debug(`dnsprove:trace:${namespace}`);
+export const info = (namespace: string) => debug(`dnsprove:info:${namespace}`);
+export const error = (namespace: string) => debug(`dnsprove:error:${namespace}`);
 
 export const getLogger = (namespace: string) => ({
   trace: trace(namespace),
