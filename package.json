@@ -5,7 +5,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/GovTechSG/open-attestation.git"
+    "url": "git+https://github.com/OpenCerts/dnsprove.git"
   },
   "main": "dist/index.js",
   "author": {
