@@ -10,8 +10,8 @@ type BlockchainNetwork = "ethereum";
 type EthereumAddress = string;
 
 enum EthereumNetworkId {
-  homestead = 1,
-  ropsten = 3
+  homestead = "1",
+  ropsten = "3"
 }
 interface OpenAttestationDNSTextRecord {
   type: RecordTypes;
@@ -100,7 +100,7 @@ export const parseDnsResults = (recordSet: IDNSRecord[] = []): OpenAttestationDN
  * > getDocumentStoreRecords("documentstores.openattestation.com")
  * > [ { type: 'openatts',
     net: 'ethereum',
-    netId: 3,
+    netId: '3',
     address: '0x0c9d5E6C766030cc6f0f49951D275Ad0701F81EC',
     dnssec: true } ]
  */
