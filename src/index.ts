@@ -1,9 +1,7 @@
-import { DNSoverHTTPS, Answer } from "dohdec";
+import axios from "axios";
 import { getLogger } from "./util/logger";
 
 const { trace } = getLogger("index");
-
-const DoHResolver = new DNSoverHTTPS();
 
 type RecordTypes = "openatts";
 
@@ -21,6 +19,18 @@ interface OpenAttestationDNSTextRecord {
   netId: EthereumNetworkId; // they are abbreviated because of 255 char constraint on dns-txt records
   address: EthereumAddress;
   dnssec: boolean;
+}
+
+interface IDNSRecord {
+  name: string;
+  type: number;
+  TTL: number;
+  data: string;
+}
+
+interface IDNSQueryResponse {
+  AD: boolean; // Whether all response data was validated with DNSSEC,
+  Answer: IDNSRecord[];
 }
 
 /**
@@ -74,7 +84,7 @@ const applyDnssecResults = (dnssecStatus: boolean) => (
  * Takes a DNS-TXT Record set and returns openattestation document store records if any
  * @param recordSet Refer to tests for examples
  */
-export const parseDnsResults = (recordSet: Answer = []): OpenAttestationDNSTextRecord[] => {
+export const parseDnsResults = (recordSet: IDNSRecord[] = []): OpenAttestationDNSTextRecord[] => {
   trace(`Parsing DNS results: ${JSON.stringify(recordSet)}`);
   return recordSet
     .map(record => record.data)
@@ -90,18 +100,18 @@ export const parseDnsResults = (recordSet: Answer = []): OpenAttestationDNSTextR
  * > getDocumentStoreRecords("documentstores.openattestation.com")
  * > [ { type: 'openatts',
     net: 'ethereum',
-    netId: '3',
+    netId: 3,
     address: '0x0c9d5E6C766030cc6f0f49951D275Ad0701F81EC',
     dnssec: true } ]
  */
 export const getDocumentStoreRecords = async (domain: string): Promise<OpenAttestationDNSTextRecord[]> => {
   trace(`Received request to resolve ${domain}`);
-  const opts = {
-    rrtype: "TXT",
-    dnssec: true
-  };
-  const results = await DoHResolver.lookup(domain, opts);
-  trace(`Lookup results: ${JSON.stringify(results)}`);
 
-  return parseDnsResults(results.Answer).map(applyDnssecResults(results.RA));
+  const query: { data: IDNSQueryResponse } = await axios.get(`https://dns.google/resolve?name=${domain}&type=TXT`);
+  const results = query.data;
+  const answers = results.Answer || [];
+
+  trace(`Lookup results: ${JSON.stringify(answers)}`);
+
+  return parseDnsResults(answers).map(applyDnssecResults(results.AD));
 };
