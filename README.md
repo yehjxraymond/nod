@@ -30,7 +30,7 @@ Queries a given domain and parses the results to retrieve openattestation docume
 
 #### Parameters
 
--   `domain` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** e.g: "ruijiechow.com", "documentstores.openattestation.com"
+-   `domain` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** e.g: "example.openattestation.com"
 
 #### Examples
 

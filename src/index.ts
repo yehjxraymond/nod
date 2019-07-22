@@ -95,7 +95,7 @@ export const parseDnsResults = (recordSet: IDNSRecord[] = []): OpenAttestationDN
 
 /**
  * Queries a given domain and parses the results to retrieve openattestation document store records if any
- * @param domain e.g: "ruijiechow.com", "documentstores.openattestation.com"
+ * @param domain e.g: "example.openattestation.com"
  * @example 
  * > getDocumentStoreRecords("example.openattestation.com")
  * > [ { type: 'openatts',
