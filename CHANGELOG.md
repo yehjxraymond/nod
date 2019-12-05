@@ -1,3 +1,10 @@
+## [1.6.1](https://github.com/rjchow/nod/compare/v1.6.0...v1.6.1) (2019-12-05)
+
+
+### Chores
+
+* **deps-dev:** bump prettier from 1.18.2 to 1.19.1 ([#121](https://github.com/rjchow/nod/issues/121)) ([f9a51a9](https://github.com/rjchow/nod/commit/f9a51a93139dbb61152b3568550443279967e7a3))
+
 # [1.6.0](https://github.com/rjchow/nod/compare/v1.5.0...v1.6.0) (2019-12-05)
 
 
