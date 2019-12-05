@@ -1,6 +1,6 @@
 {
   "name": "@rjchow/nod",
-  "version": "0.0.0-development",
+  "version": "1.6.0",
   "description": "My node module",
   "license": "MIT",
   "repository": "rjchow/nod",
