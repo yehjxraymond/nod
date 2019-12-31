@@ -1,3 +1,10 @@
+## [1.6.2](https://github.com/rjchow/nod/compare/v1.6.1...v1.6.2) (2019-12-31)
+
+
+### Chores
+
+* upgrade dependencies ([#139](https://github.com/rjchow/nod/issues/139)) ([3f6654e](https://github.com/rjchow/nod/commit/3f6654e66aa71f9e69578f683fb47bf0c279fcda))
+
 ## [1.6.1](https://github.com/rjchow/nod/compare/v1.6.0...v1.6.1) (2019-12-05)
 
 
