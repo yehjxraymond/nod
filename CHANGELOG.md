@@ -1,3 +1,10 @@
+## [1.6.3](https://github.com/rjchow/nod/compare/v1.6.2...v1.6.3) (2020-01-06)
+
+
+### Bug Fixes
+
+* 🐛 corrected exported types path in package.json ([#134](https://github.com/rjchow/nod/issues/134)) ([829d7b3](https://github.com/rjchow/nod/commit/829d7b3abf3ccf8f9b37f7c11dbf38ee807a66d3))
+
 ## [1.6.2](https://github.com/rjchow/nod/compare/v1.6.1...v1.6.2) (2019-12-31)
 
 
