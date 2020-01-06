@@ -33,7 +33,7 @@
     "commitmsg": "commitlint -e",
     "commitlint-circle": "commitlint-circle"
   },
-  "types": "dist/ts/src",
+  "types": "dist/ts",
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
