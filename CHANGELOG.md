@@ -1,3 +1,10 @@
+# [1.8.0](https://github.com/rjchow/nod/compare/v1.7.0...v1.8.0) (2020-05-18)
+
+
+### Features
+
+* added command to upgrade deps ([#223](https://github.com/rjchow/nod/issues/223)) ([a052392](https://github.com/rjchow/nod/commit/a0523927832b8d34c5b9ae77adabe3a445aec0e7))
+
 # [1.7.0](https://github.com/rjchow/nod/compare/v1.6.3...v1.7.0) (2020-05-18)
 
 
