@@ -1,3 +1,10 @@
+# [1.7.0](https://github.com/rjchow/nod/compare/v1.6.3...v1.7.0) (2020-05-18)
+
+
+### Features
+
+* major versions upgrade ([#222](https://github.com/rjchow/nod/issues/222)) ([de8c831](https://github.com/rjchow/nod/commit/de8c831e599488c64bede2d3c709f1b04c3a4aba))
+
 ## [1.6.3](https://github.com/rjchow/nod/compare/v1.6.2...v1.6.3) (2020-01-06)
 
 
