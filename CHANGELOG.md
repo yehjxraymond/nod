@@ -1,3 +1,10 @@
+## [1.8.1](https://github.com/rjchow/nod/compare/v1.8.0...v1.8.1) (2020-10-18)
+
+
+### Chores
+
+* update deps ([dd89919](https://github.com/rjchow/nod/commit/dd89919525e56f5eb605c8700c10e0e3f787e830))
+
 # [1.8.0](https://github.com/rjchow/nod/compare/v1.7.0...v1.8.0) (2020-05-18)
 
 
