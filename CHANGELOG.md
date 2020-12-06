@@ -1,3 +1,24 @@
+## [1.8.1](https://github.com/rjchow/nod/compare/v1.8.0...v1.8.1) (2020-10-18)
+
+
+### Chores
+
+* update deps ([dd89919](https://github.com/rjchow/nod/commit/dd89919525e56f5eb605c8700c10e0e3f787e830))
+
+# [1.8.0](https://github.com/rjchow/nod/compare/v1.7.0...v1.8.0) (2020-05-18)
+
+
+### Features
+
+* added command to upgrade deps ([#223](https://github.com/rjchow/nod/issues/223)) ([a052392](https://github.com/rjchow/nod/commit/a0523927832b8d34c5b9ae77adabe3a445aec0e7))
+
+# [1.7.0](https://github.com/rjchow/nod/compare/v1.6.3...v1.7.0) (2020-05-18)
+
+
+### Features
+
+* major versions upgrade ([#222](https://github.com/rjchow/nod/issues/222)) ([de8c831](https://github.com/rjchow/nod/commit/de8c831e599488c64bede2d3c709f1b04c3a4aba))
+
 ## [1.6.3](https://github.com/rjchow/nod/compare/v1.6.2...v1.6.3) (2020-01-06)
 
 

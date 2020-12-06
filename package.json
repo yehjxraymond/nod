@@ -1,6 +1,6 @@
 {
   "name": "@rjchow/nod",
-  "version": "1.6.3",
+  "version": "1.8.1",
   "description": "My node module",
   "license": "MIT",
   "repository": "rjchow/nod",
@@ -31,7 +31,8 @@
     "commit": "git-cz",
     "commit:retry": "git-cz --retry",
     "commitmsg": "commitlint -e",
-    "commitlint-circle": "commitlint-circle"
+    "commitlint-circle": "commitlint-circle",
+    "upgrade-deps": "npx updtr"
   },
   "types": "dist/ts",
   "husky": {
@@ -49,43 +50,43 @@
     "generator-nod"
   ],
   "dependencies": {
-    "debug": "4.1.1"
+    "debug": "4.2.0"
   },
   "devDependencies": {
-    "@babel/cli": "7.7.7",
-    "@babel/core": "7.7.7",
-    "@babel/plugin-proposal-class-properties": "7.7.4",
-    "@babel/plugin-proposal-nullish-coalescing-operator": "7.7.4",
-    "@babel/plugin-proposal-optional-chaining": "7.7.5",
-    "@babel/preset-env": "7.7.7",
-    "@babel/preset-typescript": "7.7.7",
-    "@commitlint/cli": "8.2.0",
-    "@commitlint/config-conventional": "8.2.0",
-    "@commitlint/prompt": "8.2.0",
+    "@babel/cli": "7.12.1",
+    "@babel/core": "7.12.3",
+    "@babel/plugin-proposal-class-properties": "7.12.1",
+    "@babel/plugin-proposal-nullish-coalescing-operator": "7.12.1",
+    "@babel/plugin-proposal-optional-chaining": "7.12.1",
+    "@babel/preset-env": "7.12.1",
+    "@babel/preset-typescript": "7.12.1",
+    "@commitlint/cli": "11.0.0",
+    "@commitlint/config-conventional": "11.0.0",
+    "@commitlint/prompt": "11.0.0",
     "@ls-age/commitlint-circle": "1.0.0",
     "@types/debug": "4.1.5",
-    "@types/jest": "24.0.25",
-    "@typescript-eslint/eslint-plugin": "2.14.0",
-    "@typescript-eslint/parser": "2.14.0",
-    "babel-eslint": "10.0.3",
-    "babel-jest": "24.9.0",
-    "commitizen": "4.0.3",
-    "documentation": "12.1.4",
-    "eslint": "6.8.0",
-    "eslint-config-airbnb-base": "14.0.0",
-    "eslint-config-prettier": "6.9.0",
-    "eslint-plugin-import": "2.19.1",
-    "eslint-plugin-prettier": "3.1.2",
-    "git-cz": "3.3.0",
-    "husky": "3.1.0",
-    "jest": "24.9.0",
-    "lint-staged": "9.5.0",
-    "open-cli": "5.0.0",
-    "prettier": "1.19.1",
-    "rimraf": "3.0.0",
-    "semantic-release": "15.14.0",
+    "@types/jest": "26.0.14",
+    "@typescript-eslint/eslint-plugin": "4.4.1",
+    "@typescript-eslint/parser": "4.4.1",
+    "babel-eslint": "10.1.0",
+    "babel-jest": "26.5.2",
+    "commitizen": "4.2.1",
+    "documentation": "13.0.2",
+    "eslint": "7.11.0",
+    "eslint-config-airbnb-base": "14.2.0",
+    "eslint-config-prettier": "6.13.0",
+    "eslint-plugin-import": "2.22.1",
+    "eslint-plugin-prettier": "3.1.4",
+    "git-cz": "4.7.1",
+    "husky": "4.3.0",
+    "jest": "26.5.3",
+    "lint-staged": "10.4.2",
+    "open-cli": "6.0.1",
+    "prettier": "2.1.2",
+    "rimraf": "3.0.2",
+    "semantic-release": "17.2.1",
     "semantic-release-npm-github-publish": "1.4.0",
-    "typescript": "3.7.4"
+    "typescript": "4.0.3"
   },
   "publishConfig": {
     "access": "public"
@@ -94,5 +95,8 @@
     "commitizen": {
       "path": "node_modules/@commitlint/prompt"
     }
+  },
+  "engines": {
+    "node": ">= 10.18"
   }
 }
